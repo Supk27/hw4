@@ -1,8 +1,22 @@
-<h1>Login</h1>
+<div class="row mt-4">
+  <h1>Login</h1>
 
-<%= form_with :url => "/sessions" do |form| %>
-  
-  <p>
-    <%= form.submit "Login" %>
-  </p>
-<% end %>
+  <%# POST /sessions => create action of sessionscontroller%>
+  <%= form_with :url => "/sessions" do |form|%>
+    <div class="row mt-2">
+      <p>
+          <%= form.label "email" %>
+          <%= form.text_field "email" %>
+          <%= form.label "password" %>
+          <%= form.password_field "password" %>
+      </p>
+    </div>
+    <div class="row mt-2">  
+      <div class="col-auto">
+        <button type="submit" class="btn btn-secondary">Login</button>
+      </div>
+
+    </div>
+
+  <% end %>
+</div>

@@ -1,19 +1,29 @@
-<h1>New User Account</h1>
+<div class="row mt-4">
+  <h1>New User Account</h1>
 
-<%= form_with :model => @user do |form| %>
-  <p>
-    <%= form.label "username" %>
-    <%= form.text_field "username" %>
-  </p>
-  <p>
-    <%= form.label "email" %>
-    <%= form.text_field "email" %>
-  </p>
-  <p>
-    <%= form.label "password" %>
-    <%= form.text_field "password" %>
-  </p>
-  <p>
-    <%= form.submit "Sign up" %>
-  </p>
-<% end %>
+
+    <%= form_with :model => @user do |form| %>
+      <div class="row mt-2">
+        <p>
+          <%= form.label "username" %>
+          <%= form.text_field "username" %>
+        </p>
+        <p>
+          <%= form.label "email" %>
+          <%= form.text_field "email" %>
+        </p>
+        <p>
+          <%= form.label "password" %>
+          <%= form.password_field "password" %>
+        </p>
+      </div>
+      <div class="row mt-2">
+        <div class="col-auto">
+          <button type="submit" class="btn btn-secondary">Sign up</button>
+        </div>
+      </div>
+    
+
+
+  <% end %>
+</div>

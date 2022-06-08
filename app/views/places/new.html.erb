@@ -1,11 +1,22 @@
-<h1>New Place</h1>
 
-<%= form_with :model => @place do |form| %>
-  <p>
-    <%= form.label "name" %>
-    <%= form.text_field "name" %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+   
+<div class="row mt-4">
+  <h1>New Place </h1>
+
+  <%= form_with :model => @place do |form| %>
+    <div class="row mt-2">
+      <p>
+        <%= form.label "name" %>
+        <%= form.text_field "name" %>
+      </p>
+    </div>
+    <div class="row mt-2">
+
+      <div class="col-auto">
+        <button type="submit" class="btn btn-secondary">Create Place</button>
+      </div>
+
+    </div>
+  <% end %>
+
+</div>
